@@ -13,3 +13,11 @@ function keepGoing(array, changeValue, skipValue){
     } array[i] = changeValue;
   } return array;
 }
+
+function findBy(array, findFn){
+  for (var i = 0; i < array.length; i++){
+     if (findFn(array[i])){
+       return array[i];
+     }
+  } return null;
+}
